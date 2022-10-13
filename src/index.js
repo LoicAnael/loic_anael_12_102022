@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './Pages/Home.jsx';
+import Home from './Pages/Home/home.jsx';
 import reportWebVitals from './reportWebVitals';
+import Header from './Components/Header/Header.jsx';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}`
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Router>
+    <GlobalStyle/>
+    <Header/>
     <Home />
+    </Router>
   </React.StrictMode>
 );
 

@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  background-color: black;
+  height: 100px;
+  align-items: center;
+  position: relative;
+}
+.nav-header {
+  display: flex;
+  width: 65%;
+  justify-content: space-between;
+  color: white;
+  position: absolute;
+  height: 100%;
+  right: 60px;
+  align-items: center;
+}
+
+.nav-header li {
+  list-style: none;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 0 15px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.logo-header {
+  height: 100%;
+  margin-left: 15px;
+  display: grid;
+  place-items: center;
+}
+.logo-header img {
+  width: 178px;
+  height: 61px;
+}
+
+.nav-header li a {
+  color: white;
+  text-decoration: none;
+}
+.nav-header li .active {
+  opacity: 0.7;
+}
