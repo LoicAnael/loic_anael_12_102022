@@ -1,10 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Home from './Pages/Home/home.jsx';
-import reportWebVitals from './reportWebVitals';
-import Header from './Components/Header/Header.jsx';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import Home from './Pages/Home/Home.jsx'
+import reportWebVitals from './reportWebVitals'
+import Header from './Components/Header/Header.jsx'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
+import Aside from './Components/Aside/Aside.jsx'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -13,19 +14,19 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
 }`
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Router>
-    <GlobalStyle/>
-    <Header/>
-    <Home />
+      <GlobalStyle />
+      <Header />
+      <Aside />
+      <Home />
     </Router>
   </React.StrictMode>
-);
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()
