@@ -1,0 +1,27 @@
+.dashboard-header {
+  text-align: left;
+  width: 100%;
+}
+
+.dashboard-header p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.dashboard-title {
+  display: flex;
+  font-size: 48px;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.dashboard-title--color {
+  color: #ff0101;
+}
+
+.dashboard {
+  margin-top: 45px;
+  margin-left: 240px;
+  display: flex;
+  justify-content: center;
+}

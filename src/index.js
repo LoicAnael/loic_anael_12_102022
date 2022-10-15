@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client'
 import Home from './Pages/Home/Home.jsx'
 import reportWebVitals from './reportWebVitals'
 import Header from './Components/Header/Header.jsx'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import Aside from './Components/Aside/Aside.jsx'
+import Dashboard from './Pages/Dashboard/Dashboard.jsx'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -21,7 +22,10 @@ root.render(
       <GlobalStyle />
       <Header />
       <Aside />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/user/:id" element={<Dashboard />} />
+      </Routes>
     </Router>
   </React.StrictMode>
 )
