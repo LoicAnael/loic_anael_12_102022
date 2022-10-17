@@ -58,3 +58,13 @@
 .legend-calorie--redRound {
   background-color: #e60000;
 }
+
+.customTooltip {
+  background-color: #e60000;
+  color: white;
+  font-size: 7px;
+  line-height: 24px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}

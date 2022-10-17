@@ -16,6 +16,23 @@ const DailyActivity = (props) => {
     calories: item.calories,
   }))
 
+  /**
+   *
+   * @param {array} payload
+   * @returns
+   */
+  const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="customTooltip">
+          <p>{payload[0].value + 'kg'}</p>
+          <p>{payload[1].value + 'Kcal'}</p>
+        </div>
+      )
+    }
+    return null
+  }
+
   return (
     <div className="barChart">
       <div className="barChart-title">
@@ -63,7 +80,7 @@ const DailyActivity = (props) => {
               hide={true}
               yAxisId="cl"
             />
-            <Tooltip cursor={{ fill: '#C4C4C4', opacity: '0.5' }} offset={35} />
+            <Tooltip content={CustomTooltip} />
 
             <Bar
               dataKey="kilogram"
