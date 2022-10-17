@@ -29,4 +29,26 @@
   display: flex;
   margin-top: 100px;
   margin-left: 0;
+  width: 835px;
+  flex-direction: column;
+  gap: 50;
+}
+
+.charts-sessionDuration {
+  background-color: #ff0000;
+  width: 258px;
+  height: 263px;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid blue;
+}
+
+.charts-sessionDuration__background {
+  background-color: #000000;
+  opacity: 0.1;
+  width: 4.93rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

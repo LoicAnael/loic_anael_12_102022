@@ -7,6 +7,9 @@ import {
 import './Dashboard.css'
 import { useParams } from 'react-router-dom'
 import DailyActivity from '../../Components/DailyActivity/DailyActivity'
+
+import SessionDuration from '../../Components/SessionDuration/SessionDuration'
+
 const Dashboard = () => {
   let { id } = useParams()
   let userId = parseInt(id)
@@ -21,8 +24,8 @@ const Dashboard = () => {
   )
 
   return (
-    <div className="dashboard">
-      <div className="dashboard-header">
+    <main className="dashboard">
+      <header className="dashboard-header">
         <h1 className="dashboard-title">
           <span>Bonjour</span>
           <span className="dashboard-title--color">
@@ -30,13 +33,19 @@ const Dashboard = () => {
           </span>
         </h1>
         <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
-      </div>
+      </header>
       <section className="dashboard-stats">
         <article className="stats-dailyActivity">
           <DailyActivity {...userActivity} />
         </article>
+        <article>
+          <div className="charts-sessionDuration">
+            <div className="charts-sessionDuration__background"></div>
+            <SessionDuration {...userSession} />
+          </div>
+        </article>
       </section>
-    </div>
+    </main>
   )
 }
 export default Dashboard
