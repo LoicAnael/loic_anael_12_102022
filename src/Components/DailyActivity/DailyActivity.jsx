@@ -18,6 +18,20 @@ const DailyActivity = (props) => {
 
   return (
     <div className="barChart">
+      <div className="barChart-title">
+        <p className="barChart-title__name">Activité quotidienne</p>
+        <div className="barChart-legend">
+          <div className="legend-kilogram">
+            <div className="legend-kilogram--blackRound"></div>
+            <span>Poids (kg)</span>
+          </div>
+          <div className="legend-calories">
+            <div className="legend-calorie--redRound"></div>
+            <span>Calories brûlées (kg)</span>
+          </div>
+        </div>
+      </div>
+
       <div style={{ width: '100%', height: 200 }}>
         <ResponsiveContainer>
           <BarChart data={formatedProps}>
@@ -41,7 +55,6 @@ const DailyActivity = (props) => {
               tick={{ stroke: '#9B9EAC' }}
             />
             <YAxis
-              tickCount={6}
               domain={[0, 600]}
               dataKey="calories"
               axisLine={false}
