@@ -1,6 +1,7 @@
 .dashboard-header {
   text-align: left;
   width: 100%;
+  height: 50px;
 }
 
 .dashboard-header p {
@@ -22,6 +23,10 @@
 .dashboard {
   margin-top: 45px;
   margin-left: 240px;
+}
+
+.dashboard-stats {
   display: flex;
-  justify-content: center;
+  margin-top: 100px;
+  margin-left: 0;
 }
