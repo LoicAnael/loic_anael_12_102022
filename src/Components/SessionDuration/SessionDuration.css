@@ -3,3 +3,24 @@
   width: 100%;
   position: relative;
 }
+
+.session-legend {
+  font-size: 15px;
+  line-height: 24px;
+  width: 147px;
+  color: #fff;
+  padding: 30px 0 0 35px;
+  position: absolute;
+  text-align: start;
+  top: 0;
+  left: 0;
+}
+
+.session-tooltip {
+  padding: 10px;
+  background-color: white;
+  font-size: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -18,6 +18,16 @@ let days = {
   7: 'D',
 }
 
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="session-tooltip">
+        <p>{payload[0].value} mn</p>
+      </div>
+    )
+  }
+}
+
 const SessionDuration = (props) => {
   let formatedProps = props.sessions?.map((item) => ({
     day: days[item.day],
@@ -26,6 +36,9 @@ const SessionDuration = (props) => {
 
   return (
     <div className="session">
+      <div className="session-legend">
+        <span>Durée moyenne des sessions</span>
+      </div>
       <ResponsiveContainer>
         <LineChart
           data={formatedProps}
@@ -49,7 +62,7 @@ const SessionDuration = (props) => {
             dataKey="sessionLength"
             tickLine={false}
           />
-          <Tooltip />
+          <Tooltip content={<CustomTooltip />} />
           <Line
             dataKey="sessionLength"
             type="natural"
