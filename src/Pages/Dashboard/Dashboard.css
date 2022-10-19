@@ -40,15 +40,27 @@
   height: 263px;
   border-radius: 5px;
   position: relative;
-  border: 1px solid blue;
 }
 
 .charts-sessionDuration__background {
   background-color: #000000;
   opacity: 0.1;
-  width: 4.93rem;
+  width: 79px;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
+}
+.charts-typeOfPerformance {
+  background-color: #282d30;
+  width: 258px;
+  height: 263px;
+  border-radius: 5px;
+}
+
+.stats-dailyPerfomances {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }

@@ -17,7 +17,7 @@ const DailyActivity = (props) => {
   }))
 
   /**
-   *
+   * @param {boolean} active
    * @param {array} payload
    * @returns
    */
