@@ -64,3 +64,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.charts-averageScore {
+  width: 16.12rem;
+  height: 100%;
+  border-radius: 0.31rem;
+  background-color: #fbfbfb;
+}

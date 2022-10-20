@@ -9,6 +9,7 @@ import { useParams } from 'react-router-dom'
 import DailyActivity from '../../Components/DailyActivity/DailyActivity'
 import TypeOfPerformance from '../../Components/TypeOfPerformance/TypeOfPerformance'
 import SessionDuration from '../../Components/SessionDuration/SessionDuration'
+import AverageScore from '../../Components/AverageScore/AverageScore'
 
 const Dashboard = () => {
   let { id } = useParams()
@@ -43,6 +44,9 @@ const Dashboard = () => {
           </div>
           <div className="charts-typeOfPerformance">
             <TypeOfPerformance {...userPerformance} />
+          </div>
+          <div className="charts-averageScore">
+            <AverageScore scorePercent={userInfo.todayScore} />
           </div>
         </article>
       </section>
