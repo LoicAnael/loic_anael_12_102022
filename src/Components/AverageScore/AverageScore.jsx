@@ -25,12 +25,10 @@ const AverageScore = ({ scorePercent }) => (
         barSize={10}
         startAngle={90}
         endAngle={450}
-        width={300}
-        height={300}
         margin={chartMargin}
       >
         <PolarAngleAxis tick={false} type="number" domain={[0, 1]} />
-        <RadialBar fill="#e60000" cornerRadius={999} dataKey={'value'} />
+        <RadialBar fill="#e60000" cornerRadius={99} dataKey={'value'} />
       </RadialBarChart>
     </ResponsiveContainer>
   </div>
