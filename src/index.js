@@ -10,6 +10,7 @@ import Dashboard from './Pages/Dashboard/Dashboard.jsx'
 
 const GlobalStyle = createGlobalStyle`
 * {
+  font-family: roboto, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
