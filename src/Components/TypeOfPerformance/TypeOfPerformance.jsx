@@ -6,22 +6,13 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
 } from 'recharts'
-
-let stat = {
-  cardio: 'Cardio',
-  energy: 'Energie',
-  endurance: 'Endurance',
-  strength: 'Force',
-  speed: 'Vitesse',
-  intensity: 'Intensité',
-}
+import PropTypes from 'prop-types'
 
 const TypeOfPerformance = (props) => {
   let dataActivity = props.data?.map((item) => ({
     value: item.value,
-    kind: stat[props.kind[item.kind]],
+    kind: props.kind[item.kind],
   }))
-
   return (
     <div className="performance">
       <ResponsiveContainer width="100%" height="100%">
@@ -51,6 +42,9 @@ const TypeOfPerformance = (props) => {
       </ResponsiveContainer>
     </div>
   )
+}
+TypeOfPerformance.propTypes = {
+  data: PropTypes.array.isRequired,
 }
 
 export default TypeOfPerformance

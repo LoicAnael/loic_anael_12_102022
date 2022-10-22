@@ -8,6 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
+import PropTypes from 'prop-types'
 
 const DailyActivity = (props) => {
   let formatedProps = props.sessions?.map((item) => ({
@@ -102,6 +103,9 @@ const DailyActivity = (props) => {
       </div>
     </div>
   )
+}
+DailyActivity.propTypes = {
+  sessions: PropTypes.array.isRequired,
 }
 
 export default DailyActivity

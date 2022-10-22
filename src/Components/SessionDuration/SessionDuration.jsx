@@ -7,7 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
-
+import PropTypes from 'prop-types'
 let days = {
   1: 'L',
   2: 'M',
@@ -78,6 +78,9 @@ const SessionDuration = (props) => {
       </ResponsiveContainer>
     </div>
   )
+}
+SessionDuration.propTypes = {
+  sessions: PropTypes.array.isRequired,
 }
 
 export default SessionDuration

@@ -5,6 +5,7 @@ import {
   PolarAngleAxis,
   ResponsiveContainer,
 } from 'recharts'
+import PropTypes from 'prop-types'
 
 const chartMargin = { top: 30, right: 30, bottom: 30, left: 30 }
 
@@ -33,5 +34,9 @@ const AverageScore = ({ scorePercent }) => (
     </ResponsiveContainer>
   </div>
 )
+
+AverageScore.propTypes = {
+  scorePercent: PropTypes.number.isRequired,
+}
 
 export default AverageScore
