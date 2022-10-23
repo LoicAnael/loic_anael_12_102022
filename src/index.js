@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import Aside from './Components/Aside/Aside.jsx'
 import Dashboard from './Pages/Dashboard/Dashboard.jsx'
+import Error from './Pages/Error/Error.jsx'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -26,6 +27,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/user/:id" element={<Dashboard />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>

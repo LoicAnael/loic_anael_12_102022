@@ -36,7 +36,7 @@ const AverageScore = ({ scorePercent }) => (
 )
 
 AverageScore.propTypes = {
-  scorePercent: PropTypes.number.isRequired,
+  scorePercent: PropTypes.number,
 }
 
 export default AverageScore

@@ -44,7 +44,7 @@ const TypeOfPerformance = (props) => {
   )
 }
 TypeOfPerformance.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
 }
 
 export default TypeOfPerformance

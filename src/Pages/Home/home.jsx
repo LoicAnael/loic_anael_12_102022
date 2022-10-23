@@ -1,7 +1,6 @@
 import './Home.css'
 import { Link } from 'react-router-dom'
 import { USER_MAIN_DATA } from '../../Components/API/mockData'
-console.log(USER_MAIN_DATA[0].userInfos)
 const Home = () => (
   <div>
     <div className="home">

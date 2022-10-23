@@ -105,7 +105,7 @@ const DailyActivity = (props) => {
   )
 }
 DailyActivity.propTypes = {
-  sessions: PropTypes.array.isRequired,
+  sessions: PropTypes.array,
 }
 
 export default DailyActivity

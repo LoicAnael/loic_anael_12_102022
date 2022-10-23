@@ -80,7 +80,7 @@ const SessionDuration = (props) => {
   )
 }
 SessionDuration.propTypes = {
-  sessions: PropTypes.array.isRequired,
+  sessions: PropTypes.array,
 }
 
 export default SessionDuration
