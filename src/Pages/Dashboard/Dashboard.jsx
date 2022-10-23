@@ -11,6 +11,13 @@ import TypeOfPerformance from '../../Components/TypeOfPerformance/TypeOfPerforma
 import SessionDuration from '../../Components/SessionDuration/SessionDuration'
 import AverageScore from '../../Components/AverageScore/AverageScore'
 import KeyFigures from '../../Components/KeyFigures/KeyFigures'
+import {
+  getUserInfo,
+  getUserActivity,
+  getUserAverage,
+  getUserPerformance,
+} from '../../Components/API/Api.js'
+console.log(getUserInfo(18))
 
 const Dashboard = () => {
   let { id } = useParams()
