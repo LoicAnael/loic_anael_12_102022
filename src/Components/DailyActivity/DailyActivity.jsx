@@ -10,8 +10,8 @@ import {
 } from 'recharts'
 import PropTypes from 'prop-types'
 
-const DailyActivity = (props) => {
-  let formatedProps = props.sessions?.map((item) => ({
+const DailyActivity = ({ sessions }) => {
+  let formatedProps = sessions?.map((item) => ({
     day: item.day.toString().slice(-1),
     kilogram: item.kilogram,
     calories: item.calories,
@@ -45,7 +45,7 @@ const DailyActivity = (props) => {
           </div>
           <div className="legend-calories">
             <div className="legend-calorie--redRound"></div>
-            <span>Calories brûlées (kg)</span>
+            <span>Calories brûlées (kCal)</span>
           </div>
         </div>
       </div>

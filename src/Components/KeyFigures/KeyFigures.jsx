@@ -3,31 +3,31 @@ import lipIcon from '../../Assets/lipIcon.svg'
 import gluIcon from '../../Assets/gluIcon.svg'
 import proIcon from '../../Assets/protIcon.svg'
 import calIcon from '../../Assets/calIcon.svg'
-const KeyFigures = (data) => {
+const KeyFigures = ({ keyData }) => {
   let formatedProps = [
     {
       img: calIcon,
       unit: 'kCal',
       label: 'Calories',
-      amount: data.keyData.calorieCount,
+      amount: keyData?.calorieCount,
     },
     {
       img: proIcon,
       unit: 'g',
       label: 'Proteines',
-      amount: data.keyData.proteinCount,
+      amount: keyData?.proteinCount,
     },
     {
       img: gluIcon,
       unit: 'g',
       label: 'Glucides',
-      amount: data.keyData.carbohydrateCount,
+      amount: keyData?.carbohydrateCount,
     },
     {
       img: lipIcon,
       unit: 'g',
       label: 'Lipides',
-      amount: data.keyData.lipidCount,
+      amount: keyData?.lipidCount,
     },
   ]
   return (

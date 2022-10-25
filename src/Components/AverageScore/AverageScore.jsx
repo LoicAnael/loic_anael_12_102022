@@ -9,11 +9,11 @@ import PropTypes from 'prop-types'
 
 const chartMargin = { top: 30, right: 30, bottom: 30, left: 30 }
 
-const AverageScore = ({ scorePercent }) => (
+const AverageScore = ({ todayScore }) => (
   <div className="score">
     <h2 className="score-title">Score</h2>
     <div className="score-content">
-      <h3>{scorePercent * 100}%</h3>
+      <h3>{todayScore * 100}%</h3>
       <p>
         de votre <br /> objectif
       </p>
@@ -21,7 +21,7 @@ const AverageScore = ({ scorePercent }) => (
 
     <ResponsiveContainer className="score__container">
       <RadialBarChart
-        data={[{ name: 'Score', value: scorePercent }]}
+        data={[{ name: 'Score', value: todayScore }]}
         innerRadius="100%"
         barSize={10}
         startAngle={90}
@@ -36,7 +36,7 @@ const AverageScore = ({ scorePercent }) => (
 )
 
 AverageScore.propTypes = {
-  scorePercent: PropTypes.number,
+  todayScore: PropTypes.number,
 }
 
 export default AverageScore

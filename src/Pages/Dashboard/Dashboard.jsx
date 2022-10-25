@@ -32,70 +32,44 @@ const Dashboard = () => {
     (item) => item.userId === userId
   )
 
-  const [dataUser, setDataUSer] = useState([])
-  const [dataActivity, setDataActivity] = useState([])
-  const [dataSession, setDataSession] = useState([])
-  const [dataPerformance, setDataPerformance] = useState([])
+  const [dataUser, setDataUSer] = useState(null)
+  const [dataActivity, setDataActivity] = useState(null)
+  const [dataSession, setDataSession] = useState(null)
+  const [dataPerformance, setDataPerformance] = useState(null)
 
   useEffect(() => {
     ///////data user info///////
-    const getDataUser = async () => {
-      try {
-        const request = await getUserInfo(id)
-        setDataUSer(request.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getDataUser()
+    getUserInfo(id)
+      .then((infos) => setDataUSer(infos.data))
+      .catch((error) => console.log(error))
+
     ///////data user acivity//////
-    const getDataActivity = async () => {
-      try {
-        const request = await getUserActivity(userId)
-        setDataActivity(request.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getDataActivity()
+    getUserActivity(userId)
+      .then((infos) => setDataActivity(infos.data))
+      .catch((error) => console.log(error))
+
     //////data user average-sessions//////
-    const getDataSessions = async () => {
-      try {
-        const request = await getUserAverage(userId)
-        setDataSession(request.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getDataSessions()
+    getUserAverage(userId)
+      .then((infos) => setDataSession(infos.data))
+      .catch((error) => console.log(error))
+
     ////// data user perfomances//////
-    const getDataPerfomance = async () => {
-      try {
-        const request = await getUserPerformance(userId)
-        setDataPerformance(request.data)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    getDataPerfomance()
+    getUserPerformance(userId)
+      .then((infos) => setDataPerformance(infos.data))
+      .catch((error) => console.log(error))
   }, [id, userId])
   console.log(dataUser)
-  console.log(dataActivity)
-  console.log(dataSession)
-  console.log(dataPerformance)
 
-  console.log(mockUserInfo)
-  console.log(mockUserActivity)
-  console.log(mockUserSession)
-  console.log(mockUserPerformance)
+  console.log('mock', mockUserInfo)
+
   return (
     <main className="dashboard">
       <header className="dashboard-header">
         <h1 className="dashboard-title">
           <span>Bonjour</span>
           <span className="dashboard-title--color">
-            {mockUserInfo?.userInfos?.firstName}
-            {/* {dataUser?.userInfos?.firstName} */}
+            {/* {mockUserInfo?.userInfos?.firstName} */}
+            {dataUser?.userInfos?.firstName}
           </span>
         </h1>
         <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
@@ -103,28 +77,34 @@ const Dashboard = () => {
       <div className="dashboard-container">
         <section className="dashboard-stats">
           <article className="stats-dailyActivity">
-            <DailyActivity {...mockUserActivity} />
-            {/* <DailyActivity {...dataActivity} /> */}
+            {/* <DailyActivity sessions={mockUserActivity?.sessions} /> */}
+            <DailyActivity sessions={dataActivity?.sessions} />
           </article>
           <article className="stats-dailyPerfomances">
             <div className="charts-sessionDuration">
               <div className="charts-sessionDuration__background"></div>
-              <SessionDuration {...mockUserSession} />
-              {/* <SessionDuration {...dataSession} /> */}
+              {/* <SessionDuration sessions={mockUserSession?.sessions} /> */}
+              <SessionDuration sessions={dataSession?.sessions} />
             </div>
             <div className="charts-typeOfPerformance">
-              <TypeOfPerformance {...mockUserPerformance} />
-              {/* <TypeOfPerformance {...dataPerformance} /> */}
+              {/* <TypeOfPerformance
+                data={mockUserPerformance?.data}
+                kind={mockUserPerformance?.kind}
+              /> */}
+              <TypeOfPerformance
+                data={dataPerformance?.data}
+                kind={dataPerformance?.kind}
+              />
             </div>
             <div className="charts-averageScore">
-              <AverageScore scorePercent={mockUserInfo.todayScore} />
-              {/* <AverageScore scorePercent={dataUser.todayScore} /> */}
+              {/* <AverageScore todayScore={mockUserInfo?.todayScore} /> */}
+              <AverageScore todayScore={dataUser?.todayScore} />
             </div>
           </article>
         </section>
         <section className="dashboard-keyFigures">
-          <KeyFigures {...mockUserInfo} />
-          {/* <KeyFigures dataUser {...dataUser} /> */}
+          {/* <KeyFigures keyData={mockUserInfo?.keyData} /> */}
+          <KeyFigures keyData={dataUser?.keyData} />
         </section>
       </div>
     </main>

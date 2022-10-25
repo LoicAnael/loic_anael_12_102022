@@ -8,10 +8,10 @@ import {
 } from 'recharts'
 import PropTypes from 'prop-types'
 
-const TypeOfPerformance = (props) => {
-  let dataActivity = props.data?.map((item) => ({
+const TypeOfPerformance = ({ data, kind }) => {
+  let dataActivity = data?.map((item) => ({
     value: item.value,
-    kind: props.kind[item.kind],
+    kind: kind[item.kind],
   }))
   return (
     <div className="performance">

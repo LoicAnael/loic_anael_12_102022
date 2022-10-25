@@ -28,8 +28,8 @@ const CustomTooltip = ({ active, payload }) => {
   }
 }
 
-const SessionDuration = (props) => {
-  let formatedProps = props.sessions?.map((item) => ({
+const SessionDuration = ({ sessions }) => {
+  let formatedProps = sessions?.map((item) => ({
     day: days[item.day],
     sessionLength: item.sessionLength,
   }))
