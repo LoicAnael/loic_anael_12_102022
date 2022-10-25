@@ -3,6 +3,8 @@ import lipIcon from '../../Assets/lipIcon.svg'
 import gluIcon from '../../Assets/gluIcon.svg'
 import proIcon from '../../Assets/protIcon.svg'
 import calIcon from '../../Assets/calIcon.svg'
+import PropTypes from 'prop-types'
+
 const KeyFigures = ({ keyData }) => {
   let formatedProps = [
     {
@@ -48,6 +50,9 @@ const KeyFigures = ({ keyData }) => {
       })}
     </div>
   )
+}
+KeyFigures.propTypes = {
+  keyData: PropTypes.object,
 }
 
 export default KeyFigures

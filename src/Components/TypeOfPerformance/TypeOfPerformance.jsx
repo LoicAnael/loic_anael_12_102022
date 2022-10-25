@@ -8,10 +8,19 @@ import {
 } from 'recharts'
 import PropTypes from 'prop-types'
 
-const TypeOfPerformance = ({ data, kind }) => {
-  let dataActivity = data?.map((item) => ({
+let stat = {
+  cardio: 'Cardio',
+  energy: 'Energie',
+  endurance: 'Endurance',
+  strength: 'Force',
+  speed: 'Vitesse',
+  intensity: 'Intensité',
+}
+
+const TypeOfPerformance = ({ props }) => {
+  let dataActivity = props?.data?.map((item) => ({
     value: item.value,
-    kind: kind[item.kind],
+    kind: stat[props?.kind[item.kind]],
   }))
   return (
     <div className="performance">
@@ -44,7 +53,7 @@ const TypeOfPerformance = ({ data, kind }) => {
   )
 }
 TypeOfPerformance.propTypes = {
-  data: PropTypes.array,
+  data: PropTypes.object,
 }
 
 export default TypeOfPerformance

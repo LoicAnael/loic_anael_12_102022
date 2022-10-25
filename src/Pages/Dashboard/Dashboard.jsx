@@ -87,14 +87,8 @@ const Dashboard = () => {
               <SessionDuration sessions={dataSession?.sessions} />
             </div>
             <div className="charts-typeOfPerformance">
-              {/* <TypeOfPerformance
-                data={mockUserPerformance?.data}
-                kind={mockUserPerformance?.kind}
-              /> */}
-              <TypeOfPerformance
-                data={dataPerformance?.data}
-                kind={dataPerformance?.kind}
-              />
+              {/* <TypeOfPerformance props={mockUserPerformance} /> */}
+              <TypeOfPerformance props={dataPerformance} />
             </div>
             <div className="charts-averageScore">
               {/* <AverageScore todayScore={mockUserInfo?.todayScore} /> */}
