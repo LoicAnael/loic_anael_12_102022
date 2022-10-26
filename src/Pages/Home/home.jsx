@@ -1,6 +1,6 @@
 import './Home.css'
 import { Link } from 'react-router-dom'
-import { USER_MAIN_DATA } from '../../Components/API/mockData'
+import { USER_MAIN_DATA } from '../../Services/mockData'
 const Home = () => (
   <div>
     <div className="home">

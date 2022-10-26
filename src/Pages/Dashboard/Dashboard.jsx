@@ -36,12 +36,11 @@ const Dashboard = () => {
   const [dataActivity, setDataActivity] = useState(null)
   const [dataSession, setDataSession] = useState(null)
   const [dataPerformance, setDataPerformance] = useState(null)
-  const [isMockData, setIsMocData] = useState(true)
-
+  let isMockData = null
   useEffect(() => {
     ///////data user info///////
     getUserInfo(id)
-      .then((infos) => setDataUSer(infos.data), setIsMocData(false))
+      .then((infos) => setDataUSer(infos.data))
       .catch((error) => console.log(error))
 
     ///////data user acivity//////
@@ -59,6 +58,7 @@ const Dashboard = () => {
       .then((infos) => setDataPerformance(infos.data))
       .catch((error) => console.log(error))
   }, [id, userId])
+  dataUser ? (isMockData = false) : (isMockData = true)
   console.log(isMockData)
   return (
     <main className="dashboard">
