@@ -37,6 +37,13 @@
 - The `yarn start` or `npm start` command will allow you to run the project.
 - port http://localhost:3001/
 
+## Run project with mocked data
+
+- Go to the "Dashboard.jsx" file.
+- Uncomment the code from the line 30 to 43.
+- replace dataUser, dataActivity, dataSession, dataPerfomance repectively by
+  mockDataUser, mockDataActivity, mockDataSession, mockDataPerfomance in the "return"
+
 ## Documents
 
 - [Figma model](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)

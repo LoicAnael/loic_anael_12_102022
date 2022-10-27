@@ -22,6 +22,27 @@ const Dashboard = () => {
   const [dataActivity, setDataActivity] = useState(null)
   const [dataSession, setDataSession] = useState(null)
   const [dataPerformance, setDataPerformance] = useState(null)
+
+  //In case you don't use back-end of this project, you can use the mocked data by uncommenting this following
+  //portion of code and replace de variables in the "return". example: dataUser becomes mockDataUser
+
+  /*  
+  import {
+  USER_ACTIVITY,
+  USER_MAIN_DATA,
+  USER_AVERAGE_SESSIONS,
+  USER_PERFORMANCE,
+} from '../../Services/mockData.js'
+   const mockDataUser = USER_MAIN_DATA.find((item) => item.id === userId)
+  const mockDataActivity = USER_ACTIVITY.find((item) => item.userId === userId)
+  const mockDataSession = USER_AVERAGE_SESSIONS.find(
+    (item) => item.userId === userId
+  )
+  const mockDataPerformance = USER_PERFORMANCE.find(
+    (item) => item.userId === userId
+  )
+ */
+
   useEffect(() => {
     ///////data user info///////
     getUserInfo(id)
