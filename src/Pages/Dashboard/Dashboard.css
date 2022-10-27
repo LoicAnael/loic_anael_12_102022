@@ -87,3 +87,12 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.loading {
+  width: 100%;
+  padding-top: 80px;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: #ff0000;
+}
