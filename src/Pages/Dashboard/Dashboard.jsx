@@ -23,7 +23,7 @@ const Dashboard = () => {
   const [dataSession, setDataSession] = useState(null)
   const [dataPerformance, setDataPerformance] = useState(null)
 
-  //In case you don't use back-end of this project, you can use the mocked data by uncommenting this following
+  //In case you won't use back-end of this project, you can use the mocked data by uncommenting this following
   //portion of code and replace de variables in the "return". example: dataUser becomes mockDataUser
 
   /*  
@@ -46,24 +46,26 @@ const Dashboard = () => {
   useEffect(() => {
     ///////data user info///////
     getUserInfo(id)
-      .then((infos) => setDataUSer(infos.data))
+      .then((data) => setDataUSer(data))
       .catch((error) => console.log(error))
 
     ///////data user acivity//////
     getUserActivity(userId)
-      .then((infos) => setDataActivity(infos.data))
+      .then((data) => setDataActivity(data))
       .catch((error) => console.log(error))
 
     //////data user average-sessions//////
     getUserAverage(userId)
-      .then((infos) => setDataSession(infos.data))
+      .then((data) => setDataSession(data))
       .catch((error) => console.log(error))
 
     ////// data user perfomances//////
     getUserPerformance(userId)
-      .then((infos) => setDataPerformance(infos.data))
+      .then((data) => setDataPerformance(data))
       .catch((error) => console.log(error))
   }, [id, userId])
+
+  console.log(dataPerformance)
 
   return dataUser ? (
     <main className="dashboard">

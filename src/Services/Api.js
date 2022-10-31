@@ -1,32 +1,36 @@
+import User from '../Models/User'
+import Performance from '../Models/Performance'
+import Activity from '../Models/Activity'
+import Session from '../Models/Session'
+
 const getUserInfo = async (id) => {
   const response = await fetch(`http://localhost:3000/user/${id}`)
-  const data = await response.json()
-  if (data.data.todayScore === undefined) data.data.todayScore = data.data.score
-
-  return data
+  const datas = await response.json()
+  if (datas.data.todayScore === undefined)
+    datas.data.todayScore = datas.data.score
+  return new User(datas.data)
 }
 
-const getUserPerformance = async (id) => {
-  const response = await fetch(`http://localhost:3000/user/${id}/performance`)
-  const data = response.json()
-
-  return data
-}
-
-const getUserActivity = async (id) => {
-  const response = await fetch(`http://localhost:3000/user/${id}/activity`)
-  const data = response.json()
-
-  return data
-}
-
-const getUserAverage = async (id) => {
+const getUserPerformance = async (userId) => {
   const response = await fetch(
-    `http://localhost:3000/user/${id}/average-sessions`
+    `http://localhost:3000/user/${userId}/performance`
   )
-  const data = response.json()
+  const datas = await response.json()
+  return new Performance(datas.data)
+}
 
-  return data
+const getUserActivity = async (userId) => {
+  const response = await fetch(`http://localhost:3000/user/${userId}/activity`)
+  const datas = await response.json()
+  return new Activity(datas.data)
+}
+
+const getUserAverage = async (userId) => {
+  const response = await fetch(
+    `http://localhost:3000/user/${userId}/average-sessions`
+  )
+  const datas = await response.json()
+  return new Session(datas.data)
 }
 
 export { getUserInfo, getUserPerformance, getUserActivity, getUserAverage }
