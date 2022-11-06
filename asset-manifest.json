@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/loic_anael_12_102022/static/css/main.d2918546.css",
-    "main.js": "/loic_anael_12_102022/static/js/main.b9671f6a.js",
+    "main.js": "/loic_anael_12_102022/static/js/main.4275d94d.js",
     "static/js/787.d7399d4d.chunk.js": "/loic_anael_12_102022/static/js/787.d7399d4d.chunk.js",
     "static/media/logo.png": "/loic_anael_12_102022/static/media/logo.337e8febecea24c0c4b1.png",
     "static/media/swim-icon.svg": "/loic_anael_12_102022/static/media/swim-icon.c135dfed9473b0728721ce9a4c20819a.svg",
@@ -14,11 +14,11 @@
     "static/media/calIcon.svg": "/loic_anael_12_102022/static/media/calIcon.3067c742293e6d0833f654a885812c50.svg",
     "static/media/fitness-icon.svg": "/loic_anael_12_102022/static/media/fitness-icon.c9f62cf1ca88da4b2dee77390edd0fe3.svg",
     "main.d2918546.css.map": "/loic_anael_12_102022/static/css/main.d2918546.css.map",
-    "main.b9671f6a.js.map": "/loic_anael_12_102022/static/js/main.b9671f6a.js.map",
+    "main.4275d94d.js.map": "/loic_anael_12_102022/static/js/main.4275d94d.js.map",
     "787.d7399d4d.chunk.js.map": "/loic_anael_12_102022/static/js/787.d7399d4d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d2918546.css",
-    "static/js/main.b9671f6a.js"
+    "static/js/main.4275d94d.js"
   ]
 }
