@@ -44,6 +44,10 @@
 - replace dataUser, dataActivity, dataSession, dataPerfomance repectively by
   mockDataUser, mockDataActivity, mockDataSession, mockDataPerfomance in the "return"
 
+## Preview
+
+- Click on this link to display the visual result https://loicanael.github.io/loic_anael_12_102022/
+
 ## Documents
 
 - [Figma model](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)
