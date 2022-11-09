@@ -17,6 +17,13 @@ let stat = {
   intensity: 'Intensité',
 }
 
+/**
+ * @description creation of a graphic charter to display the type of perfomance of users
+ * @param {object[]} props
+ * @param {object} props[].kind
+ * @param {array} props[].data
+ * @return {HTMLElement}
+ */
 const TypeOfPerformance = ({ props }) => {
   let dataActivity = props?.data?.map((item) => ({
     value: item.value,

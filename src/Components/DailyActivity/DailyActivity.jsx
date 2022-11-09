@@ -10,6 +10,15 @@ import {
 } from 'recharts'
 import PropTypes from 'prop-types'
 
+/**
+ * @description creation of a graphic charter to display the daily activity of users
+ * @param {array[]} sessions of the user
+ * @param {number} sessions[].day
+ * @param {number} sessions[].kilogram
+ * @param {number} sessions[].calories
+ * @return {HTMLElement}
+ */
+
 const DailyActivity = ({ sessions }) => {
   let formatedProps = sessions?.map((item) => ({
     day: item.day.toString().slice(-1),

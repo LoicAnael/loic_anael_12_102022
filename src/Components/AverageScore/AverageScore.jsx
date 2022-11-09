@@ -8,6 +8,10 @@ import {
 import PropTypes from 'prop-types'
 
 const chartMargin = { top: 30, right: 30, bottom: 30, left: 30 }
+/**
+ * @description creation of a graphic charter to display the average score of users
+ * @param {number} todayScore the score of the user
+ */
 
 const AverageScore = ({ todayScore }) => (
   <div className="score">

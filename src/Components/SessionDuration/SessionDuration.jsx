@@ -28,6 +28,13 @@ const CustomTooltip = ({ active, payload }) => {
   }
 }
 
+/**
+ * @description creation of a graphic charter to display the session deuration of users
+ * @param {array[]} sessions of the user
+ * @param {number} sessions[].day
+ * @param {number} sessions[].sessionLength
+ * @return {HTMLElement}
+ */
 const SessionDuration = ({ sessions }) => {
   let formatedProps = sessions?.map((item) => ({
     day: days[item.day],

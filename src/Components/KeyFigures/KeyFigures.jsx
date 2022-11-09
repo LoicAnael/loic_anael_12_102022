@@ -5,6 +5,16 @@ import proIcon from '../../Assets/protIcon.svg'
 import calIcon from '../../Assets/calIcon.svg'
 import PropTypes from 'prop-types'
 
+/**
+ * @description creation of a graphic charter to display the type of perfomance of users
+ * @param {object[]} keyData
+ * @param {number} keyData[].calorieCount
+ * @param {number} keyData[].proteinCount
+ * @param {number} keyData[].carbohydrateCount
+ * @param {number} keyData[].lipidCount
+ * @return {HTMLElement}
+ */
+
 const KeyFigures = ({ keyData }) => {
   let formatedProps = [
     {
